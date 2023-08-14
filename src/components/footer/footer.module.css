@@ -1,0 +1,38 @@
+.container {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  cursor:pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+  color: #e9a8a8;
+}
+
+.facebook {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.facebook:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+  color: #e9a8a8;
+}

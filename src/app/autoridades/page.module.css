@@ -1,0 +1,78 @@
+/* Css for Members section */
+.membersContainer {
+height: 100vh;
+}
+
+.mainTitle {
+  font-size: 40px;
+}
+
+.membersTitle {
+  margin:20px 0px;
+}
+
+.members{
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+/* make an avatar figure for member */
+.member {
+	line-height: 0;		/* remove line-height */ 
+	display: inline-block;	/* circle wraps image */
+	margin: 5px;
+  border: 4px solid rgba(0, 0, 0, 0.4);
+	border-radius: 50%;	/* relative value */
+	transition: linear 0.25s;
+  height: 248px;
+  width: 248px;
+  background-size: cover;
+}
+
+.member:hover {
+    transition: ease-out 0.2s;
+    border: 4px solid rgba(0,0,0,0.2);
+    -webkit-transition: ease-out 0.2s;
+}
+
+.member:nth-child(1){
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965809/img/horacio_santana_avatar_zwzo4s.jpg");
+}
+
+.member:nth-child(2){
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965812/img/jose_carrizo_avatar_vlc66u.jpg");
+}
+
+.member:nth-child(3){
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965815/img/peter_matheus_avatar_mpaisf.jpg");
+}
+
+.member:nth-child(4){
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965302/img/avatar_julio_bazan_ycslci.jpg");
+}
+
+.title {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  /* translate to bottom */
+  transform: translate(60px,260px);
+  
+
+
+}
+/*   position: absolute;
+  left: 5px;
+  bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left; */
+
