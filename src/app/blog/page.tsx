@@ -2,39 +2,41 @@ import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-const Blog = () => {
+
+async function getData() {
+  const res = await fetch('http://localhost:3000/api/posts', {
+    cache:"no-store",
+  });
+  
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
+}
+const Blog = async () => {
+  const data = await getData()
   return (
-    <div className={styles.mainContainer}><h1>Blog</h1>
-     <Link href="blog/testId" className={styles.container}>
-      <div className={styles.imageContainer}>
-        <Image
-        src="https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691971610/img/ul%20ji/blog1_co5ncs.jpg"
-        alt="Picture of the author"
-        width={400}
-        height={250}
-        className={styles.image}
-        />
-      </div>
-      <div className={styles.content}>
-        <h1 className={styles.title}>Examen 24-5-2023</h1>
-        <p className={styles.desc}>Descripción del examen</p>
-      </div>
-     </Link>
-     <Link href="/testId" className={styles.container}>
-      <div className={styles.imageContainer}>
-        <Image
-        src="https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691971610/img/ul%20ji/blog1_co5ncs.jpg"
-        alt="Picture of the author"
-        width={400}
-        height={250}
-        className={styles.image}
-        />
-      </div>
-      <div className={styles.content}>
-        <h1 className={styles.title}>Examen 24-5-2023</h1>
-        <p className={styles.desc}>Descripción del examen</p>
-      </div>
-     </Link>
+    <div className={styles.mainContainer}>
+      {data.map(item =>(
+        <Link href={`/blog/${item._id}`} className={styles.container} key={item.id}>
+          <div className={styles.imageContainer}>
+            <Image
+            src={item.img}
+            alt="Picture of the author"
+            width={400}
+            height={250}
+            className={styles.image}
+            />
+          </div>
+          <div className={styles.content}>
+            <h1 className={styles.title}>{item.title}</h1>
+            <p className={styles.desc}>{item.desc}</p>
+          </div>
+        </Link>
+      ))
+      }
+    
+   
     </div>
    
   )

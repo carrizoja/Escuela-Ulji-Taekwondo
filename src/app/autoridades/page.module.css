@@ -42,19 +42,19 @@ height: 100vh;
 }
 
 .member:nth-child(1){
-  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965809/img/horacio_santana_avatar_zwzo4s.jpg");
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965809/img/ul%20ji/horacio_santana_avatar_zwzo4s.jpg");
 }
 
 .member:nth-child(2){
-  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965812/img/jose_carrizo_avatar_vlc66u.jpg");
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965812/img/ul%20ji/jose_carrizo_avatar_vlc66u.jpg");
 }
 
 .member:nth-child(3){
-  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965815/img/peter_matheus_avatar_mpaisf.jpg");
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965815/img/ul%20ji/peter_matheus_avatar_mpaisf.jpg");
 }
 
 .member:nth-child(4){
-  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965302/img/avatar_julio_bazan_ycslci.jpg");
+  background: url("https://res.cloudinary.com/ijac-it-solutions/image/upload/v1691965302/img/ul%20ji/avatar_julio_bazan_ycslci.jpg");
 }
 
 .title {
